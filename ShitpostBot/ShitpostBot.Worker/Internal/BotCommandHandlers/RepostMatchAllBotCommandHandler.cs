@@ -57,7 +57,7 @@ namespace ShitpostBot.Worker
                 return true;
             }
 
-            await chatClient.SendMessage(messageDestination, $"Starting to match. Čekej píčo {chatClient.Utils.Emoji(":PauseChamp:")} ...");
+            await chatClient.SendMessage(messageDestination, "Starting to match. Čekej píčo :pausechamp: ...");
 
             var allOtherPosts = await postsReader.All.Where(p => p.Id != post.Id).OrderBy(p => p.PostedOn).ToListAsync();
             var similarPosts = allOtherPosts
